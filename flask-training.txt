@@ -1,0 +1,13 @@
+1. Flask Basics - app.py
+2. Routing - routes-basics.py
+3. Routing Variables - routes-variables.py
+4. URL Binding - url-binding.py
+5. HTTP POST and GET Methods - http-methods.py
+6. JINJA Templating - jinja-basics.py
+                    - jinja-if-else-loops.py
+                    - jinja-blocks.py
+                    - jinja-macros.py
+7. SQLAlchemy - flask-sqlalchemy-intro.py
+              - flask-sqlalchemy-queries.py
+    Demonstration for Oracle and MYSQL
+8. Cookies -     

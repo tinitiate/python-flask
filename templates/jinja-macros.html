@@ -1,0 +1,42 @@
+<!-- Demonstration for Macros -->
+
+<!-- MACRO: html_dropdown
+     Desc:  This accepts a dictionary p_data with a Key and Value, 
+     the dictionary-key will be assigned to the dropdown box key 
+     and the dictionary-value to the  dropdown box value 
+ -->
+{% macro html_dropdown(p_dd_data) -%}
+
+    <select>
+        {% for l_key, l_value in p_dd_data.items() %}
+            <option value="{{ l_key }}">{{ l_value }}</option>
+        {% endfor %}
+    </select>
+
+{%- endmacro %}
+
+
+<!-- MACRO: multiple_dropdowns
+     Desc:  * This macro, calls the htm_dropdown and for the data it reads a 
+              LIST of DICTIONARIES
+            * Here we also demonstrate Jinja Macro calling another Macro
+            * This creates multiple drop downs
+ -->
+{%- macro multi_dropdown(p_mdd_data) -%}
+
+    {% for l_listvalues in p_mdd_data %}
+
+        {{-  html_dropdown(l_listvalues) -}}
+        
+    {% endfor %}
+{%- endmacro %}
+
+
+<!-- MACRO: red_box
+     Desc:  * This accepts a parameter p_data and puts that content in a 
+              red background with white text.
+            * Here we demonstrate reading from a input DICTIONARY data
+ -->
+{%- macro red_box(p_data) -%}
+    <p style="background-color:red; color:white"> {{ p_data }} </p>
+{%- endmacro %}

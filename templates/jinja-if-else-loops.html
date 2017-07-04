@@ -1,0 +1,26 @@
+<html>
+    <head>
+    <title>Tinitiate.com JINJA if else and loops</title>
+    </head>
+    <body>
+        <h1>Tinitiate.com JINJA if else Demonstration</h1>
+
+        {% if l_language == 'JAVA' %}
+            <h3>Welcome to JAVA CODING Training!</h3>
+        {% elif l_language == 'PYTHON' %}
+            <h3>Welcome to PYTHON CODING Training!</h3>
+        {% else %}
+            <h3>Welcome to IT Training!</h3>
+        {% endif %}
+         
+
+        <h1>Tinitiate.com JINJA Loop Demonstration</h1>
+                
+        <ol>      
+        {% for i in l_topics %}
+            <li>{{ i }}</li>
+        {% endfor %}
+        </ol>
+         
+    </body>
+</html>

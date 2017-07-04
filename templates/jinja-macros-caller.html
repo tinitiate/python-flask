@@ -1,0 +1,13 @@
+{% import 'jinja-macros.html' as ti %}
+<html>
+    <body>
+       {{ ti.red_box(p_data) }} 
+       
+       <h5>Drop Down</h5>
+       {{  ti.html_dropdown(p_dd_data) }}
+       
+       <h5>Multiple Drop Down, Using JINJA NESTED MACROS</h5>
+       {{  ti.multi_dropdown(p_mdd_data) }}
+
+    </body>
+</html>
